@@ -1,0 +1,23 @@
+<script setup>
+import { useRoute, useRouter } from "vue-router";
+import { usePosts } from "../stores/posts";
+import PostWriter from "../components/PostWriter.vue";
+
+const route = useRoute();
+const router = useRouter();
+const postsStore = usePosts();
+const id = route.params.id;
+const post = postsStore.all.get(id);
+if (!post) {
+  throw Error(`Post with id ${id} was not found`);
+}
+async function handleSubmit(post) {
+  await postsStore.updatePost(post);
+  router.push("/");
+}
+</script>
+
+<template>
+  Edit Post
+  <PostWriter :post="post" @submit="handleSubmit" />
+</template>
