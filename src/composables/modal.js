@@ -7,17 +7,17 @@ const component = shallowRef();
 
 export function useModal() {
   return {
-    show,
-    component,
-    showModal: (type = "signUp" | "signIn") => {
+    show: show,
+    component: component,
+    showModal: (type = "signUp" || "signIn") => {
       show.value = true;
       switch (type) {
         case "signIn":
-          return (component.value = SigninForm);
+          return component.value = SigninForm;
         case "signUp":
-          return (component.value = SignupForm);
+          return component.value = SignupForm;
       }
     },
-    hideModal: () => (show.value = false),
+    hideModal: () => show.value = false,
   };
 }

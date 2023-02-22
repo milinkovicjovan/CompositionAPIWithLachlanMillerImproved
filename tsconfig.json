@@ -14,7 +14,7 @@
       "skipLibCheck": true,
       "noImplicitAny": true
     },
-    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/main.js", "src/main.js", "src/users.js", "src/users.js", "src/posts.js", "src/posts.js", "src/validation.js", "src/validation.js", "src/constants.js", "src/constants.js", "src/stores/users.js", "src/stores/users.js", "src/stores/posts.js", "src/stores/posts.js", "src/server/posts.js", "src/server/posts.js", "src/server/index.js", "src/server/index.js"],
+    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/main.js", "src/main.js", "src/users.js", "src/users.js", "src/posts.js", "src/posts.js", "src/validation.js", "src/validation.js", "src/constants.js", "src/constants.js", "src/stores/users.js", "src/stores/users.js", "src/stores/posts.js", "src/stores/posts.js", "src/server/posts.js", "src/server/posts.js", "src/server/index.js", "src/server/index.js", "src/composables/modal.js", "src/composables/modal.js"],
     "references": [{ "path": "./tsconfig.node.json" }],
     "ts-node": {
       "compilerOptions": {
